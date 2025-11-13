@@ -1,4 +1,4 @@
-.PHONY: help setup data train test clean validate format
+.PHONY: help setup data train test clean validate format info
 
 help:
 	@echo "SemEval 2026 Task 13 - Available Commands"
@@ -19,11 +19,12 @@ help:
 	@echo "  make validate       - Validate submission format"
 	@echo "  make clean          - Clean generated files"
 	@echo "  make format         - Format code with black"
+	@echo "  make info           - Show project info"
 
 # Setup with pip
 setup:
 	@echo "Installing dependencies..."
-	pip3 install pandas numpy scikit-learn typer rich loguru pyarrow pytest
+	pip3 install -r requirements.txt
 	@echo "✅ Done! Run 'make data' to generate sample data"
 
 # Generate sample data
@@ -67,19 +68,19 @@ clean:
 	rm -rf logs/*.log
 	rm -rf __pycache__
 	rm -rf .pytest_cache
-	find . -type d -name "__pycache__" -exec rm -rf {} +
+	find . -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true
 	find . -type f -name "*.pyc" -delete
 	@echo "✅ Cleaned!"
 
 # Format code (requires black)
 format:
 	@echo "Formatting code..."
-	black src/ tests/ scripts/
+	black src/ tests/
 	@echo "✅ Code formatted!"
 
 # Show project info
 info:
 	@echo "Project: SemEval 2026 Task 13"
-	@echo "Training data: $(shell ls -lh data/train_*.parquet 2>/dev/null | wc -l) files"
+	@echo "Training data: $(shell ls -1 data/train_*.parquet 2>/dev/null | wc -l) files"
 	@echo "Models saved: $(shell ls -1 models/*.pkl 2>/dev/null | wc -l) models"
 	@echo "Tests: $(shell ls -1 tests/test_*.py 2>/dev/null | wc -l) test files"
