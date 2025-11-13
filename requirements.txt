@@ -1,0 +1,39 @@
+# SemEval 2026 Task 13 - Machine-Generated Code Detection
+# Pinned versions for reproducibility
+# Python 3.9+ required
+
+# Core ML dependencies (PINNED for reproducibility)
+pandas==2.1.4
+numpy==1.26.2
+scikit-learn==1.3.2
+
+# CLI and display
+typer==0.9.0
+rich==13.7.0
+
+# Data handling
+pyarrow==14.0.1
+
+# Jupyter notebooks
+jupyter==1.0.0
+notebook==7.0.6
+ipykernel==6.27.1
+
+# Visualization
+matplotlib==3.8.2
+seaborn==0.13.0
+
+# Testing
+pytest==7.4.3
+pytest-cov==4.1.0
+
+# Code quality (optional but recommended)
+black==23.12.1
+flake8==6.1.0
+
+# Optional: Advanced features (uncomment and install if needed)
+# xgboost==2.0.3
+# lightgbm==4.1.0
+# transformers==4.36.2
+# torch==2.1.2
+# radon==6.0.1  # For code complexity metrics
