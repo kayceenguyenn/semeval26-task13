@@ -47,7 +47,6 @@ def train_baseline(task='A', model_type='random_forest'):
     print("RESULTS")
     print(f"{'='*60}")
     print(f"Macro F1: {metrics['macro_f1']:.4f}")
-    print(f"Accuracy: {metrics['accuracy']:.4f}")
     print(f"{'='*60}\n")
     
     # Save
