@@ -13,6 +13,7 @@ rich==13.7.0
 
 # Data handling
 pyarrow==14.0.1
+datasets==2.16.1  # HuggingFace datasets for real competition data
 
 # Jupyter notebooks
 jupyter==1.0.0

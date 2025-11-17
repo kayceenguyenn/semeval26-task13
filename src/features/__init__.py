@@ -13,6 +13,8 @@ Usage:
 
 from .basic import extract_basic_features
 from .keywords import extract_keyword_features
+# TODO: Uncomment when ast_features.py is populated
+# from .ast_features import extract_ast_features
 # Add your feature module here:
 # from .your_name import extract_your_features
 
@@ -40,6 +42,10 @@ def extract_all_features(code: str) -> dict:
     
     # Keyword features (always included)
     features.update(extract_keyword_features(code))
+    
+    # TODO: Uncomment when ast_features.py is populated
+    # AST features (structural analysis)
+    # features.update(extract_ast_features(code))
     
     # Add your features here:
     # features.update(extract_your_features(code))
