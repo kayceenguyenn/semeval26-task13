@@ -156,6 +156,7 @@ class XGBoostModel(BaseEstimator, ClassifierMixin):
                 X_arr, y_arr,
                 sample_weight=sample_weight,
                 eval_set=eval_set,
+                early_stopping_rounds=self.early_stopping_rounds,
                 verbose=False,
             )
         else:
