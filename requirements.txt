@@ -34,10 +34,21 @@ pytest-cov==4.1.0
 black==23.12.1
 flake8==6.1.0
 
-# Optional: Advanced features (uncomment and install if needed)
-# xgboost==2.0.3
+# Progress bars
+tqdm==4.66.1
+
+# Advanced models (Task B improvements)
+xgboost==2.0.3
+
+# Optional: Additional advanced features (uncomment if needed)
 # lightgbm==4.1.0
 # transformers==4.36.2
 # torch==2.1.2
 # radon==6.0.1  # For code complexity metrics
+
+# Logging
 loguru==0.7.2
+
+# Config management
+pydantic==2.5.2
+pydantic-settings==2.1.0
