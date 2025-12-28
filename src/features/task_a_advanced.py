@@ -1,9 +1,5 @@
 """
 Advanced features for Task A (Human vs AI detection)
-
-Author: [Your Name]
-Difficulty: ⭐⭐ Intermediate
-Description: Features specifically designed to distinguish human-written from AI-generated code
 """
 
 import ast
