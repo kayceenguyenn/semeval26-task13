@@ -92,7 +92,6 @@ def extract_all_features(code: str, include_tfidf: bool = False) -> dict:
     return features
 
 
-def extract_features_from_dataframe(df: pd.DataFrame, show_progress: bool = True, n_jobs: int = -1) -> pd.DataFrame:
 def fit_tfidf_pipeline(train_codes: list, train_labels: np.ndarray) -> None:
     """
     Fit TF-IDF vectorizers and compute class centroids
